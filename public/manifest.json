@@ -1,0 +1,17 @@
+{
+  "name": "CAPACITY CONNECT — Digital Capacity Building Platform",
+  "short_name": "CapacityConnect",
+  "description": "Institutional AI-powered digital capacity-building and learning management platform for organizational training and performance monitoring.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c2340",
+  "theme_color": "#0c2340",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #174A7E;
+  --primary-hover: #0c2340;
+  --primary-accent: #1e3a8a;
+  --secondary: #087F8C;
+  --secondary-hover: #0f766e;
+  --background: #F6F8FB;
+  --surface: #ffffff;
+  --surface-muted: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text-main: #172033;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  
+  --success: #159A6A;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+
+  --warning: #D89A2E;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+
+  --danger: #b91c1c;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+
+  --info: #0369a1;
+  --info-bg: #f0f9ff;
+  --info-border: #bae6fd;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-accent: var(--primary-accent);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-text-light: var(--text-light);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-main);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular numbers for clean analytics & data display */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Institutional custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Certificate print styles */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  aside, header, nav, footer, .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .certificate-printable {
+    box-shadow: none !important;
+    border: 3px double #174A7E !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
